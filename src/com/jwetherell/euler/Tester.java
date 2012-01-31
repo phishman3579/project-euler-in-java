@@ -53,5 +53,25 @@ public class Tester {
             System.out.println();
             System.gc();
         }
+        
+        {
+            System.out.println("Problem 3.");
+            long before = System.nanoTime();
+            long result = Problem3.solve();
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+            
+            System.out.println("Problem 3 ideal solution.");
+            before = System.nanoTime();
+            result = Problem3.ideal();
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+        }
     }
 }
