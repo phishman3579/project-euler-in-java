@@ -15,7 +15,7 @@ public class Tester {
                 array[i] = i;
             }
             
-            System.out.println("Problem 1 using loop.");
+            System.out.println("Problem 1.");
             long before = System.nanoTime();
             int result = Problem1.solve(array);
             long after = System.nanoTime();
@@ -24,9 +24,29 @@ public class Tester {
             System.out.println();
             System.gc();
             
-            System.out.println("Problem 1 using bits.");
+            System.out.println("Problem 1 ideal solution.");
             before = System.nanoTime();
-            result = Problem1.solve(size);
+            result = Problem1.ideal(size);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+        }
+        
+        {
+            System.out.println("Problem 2.");
+            long before = System.nanoTime();
+            int result = Problem2.solve();
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+            
+            System.out.println("Problem 2 ideal solution.");
+            before = System.nanoTime();
+            result = Problem2.ideal();
             after = System.nanoTime();
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");

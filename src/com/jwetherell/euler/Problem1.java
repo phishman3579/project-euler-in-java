@@ -19,7 +19,7 @@ public class Problem1 {
         return sum;
     }
     
-    public static final int solve(int max) {
+    public static final int ideal(int max) {
         return sumDivisibleBy(max-1,3)+sumDivisibleBy(max-1,5)-sumDivisibleBy(max-1,15);
     }
     
