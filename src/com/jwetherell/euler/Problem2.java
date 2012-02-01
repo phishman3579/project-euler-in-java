@@ -10,10 +10,8 @@ package com.jwetherell.euler;
  * @author Justin Wetherell <phishman3579@gmail.com>
  */
 public class Problem2 {
-    
-    private static final int FOUR_MILLION = 4000000;
-    
-    public static final int solve() {
+
+    public static final int solve(int max) {
         int minusOne = 2;
         int minusTwo = 1;
         int sum = 2;
@@ -23,13 +21,13 @@ public class Problem2 {
             value = minusTwo+minusOne;
             minusTwo = minusOne;
             minusOne = value;
-            if (value>FOUR_MILLION) break;
+            if (value>max) break;
             if (value%2==0) sum+=value;
         }
         return sum;
     }
     
-    public static final int ideal() {
+    public static final int ideal(int max) {
         int minusOne = 8; //Second even fibo
         int minusTwo = 2; //First even fibo
         int sum = minusOne+minusTwo;
@@ -39,7 +37,7 @@ public class Problem2 {
             value = minusTwo+4*minusOne;
             minusTwo = minusOne;
             minusOne = value;
-            if (value>FOUR_MILLION) break;
+            if (value>max) break;
             if (value%2==0) sum+=value;
         }
         return sum;
