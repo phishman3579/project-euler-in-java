@@ -18,9 +18,8 @@ public class Problem4 {
         for (int i=min; i<max; i++) {
             for (int j=min; j<max; j++) {
                 int value = i*j;
-                if (value>largest && isPalindrone(value)) {
+                if (value>largest && isPalindrone(value))
                     largest = value;
-                }
             }    
         }
 
@@ -43,14 +42,30 @@ public class Problem4 {
 
         int min = (int)Math.pow(10, digits-1);
         int max = (int)Math.pow(10, digits);
-        for (int i=max-1; i>=min; i--) {
-            for (int j=i; j>=min; j--) {
-                int value = i*j;
-                if (value>largest && isPalindrone(value)) {
-                    largest = value;
+        int a = max-1;
+        int b = 0;
+        int db = 0;
+        while (a>=min) {
+            if (a%11==0) {
+                b = 999;
+                db = 1;
+            } else {
+                b = 990; //The largest number less than or equal 999 and divisible by 11
+                db = 11;
+            }
+            
+            while (b>=a) {
+                int value = a*b;
+                
+                if (value<=largest)
                     break;
-                }
-            }    
+                
+                if (isPalindrone(value))
+                    largest = value;
+
+                b -= db;
+            }
+            a--;
         }
 
         return largest;
