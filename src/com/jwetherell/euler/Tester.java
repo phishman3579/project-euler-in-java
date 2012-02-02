@@ -99,5 +99,50 @@ public class Tester {
             System.out.println();
             System.gc();
         }
+        
+        {
+            int max = 10;
+            
+            System.out.println("Problem 5.");
+            long before = System.nanoTime();
+            long result = Problem5.solve(max);
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            
+            System.gc();
+            
+            System.out.println("Problem 5 ideal solution.");
+            before = System.nanoTime();
+            result = Problem5.ideal(max);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+        }
+        
+        
+        {
+            int number = 100;
+            
+            System.out.println("Problem 6.");
+            long before = System.nanoTime();
+            long result = Problem6.solve(number);
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            
+            System.gc();
+            
+            System.out.println("Problem 6 ideal solution.");
+            before = System.nanoTime();
+            result = Problem6.ideal(number);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            System.gc();
+        }
     }
 }

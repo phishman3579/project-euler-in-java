@@ -16,7 +16,7 @@ public class Problem4 {
         int min = (int)Math.pow(10, digits-1);
         int max = (int)Math.pow(10, digits);
         for (int i=min; i<max; i++) {
-            for (int j=min; j<max; j++) {
+            for (int j=i; j<max; j++) {
                 int value = i*j;
                 if (value>largest && isPalindrone(value))
                     largest = value;
