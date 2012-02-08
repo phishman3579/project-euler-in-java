@@ -38,18 +38,21 @@ public class Problem3 {
             largest = 1;
         }
         
+        long max = (long)Math.sqrt(n);
         int factor = 3;
-        while (n>1) {
+        while (n>1 && factor<max) {
             if (n%factor==0) {
                 n = n/factor;
                 largest = factor;
                 while (n%factor==0) {
                     n = n/factor;
                 }
+                max = (long)Math.sqrt(n);
             }
             factor += 2;
         }
         
-        return largest;
+        if (n==1) return largest;
+        return n;
     }
 }
