@@ -31,6 +31,7 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
             System.gc();
         }
         
@@ -53,6 +54,7 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
             System.gc();
         }
         
@@ -75,6 +77,7 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
             System.gc();
         }
         
@@ -97,6 +100,7 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
             System.gc();
         }
         
@@ -119,9 +123,9 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
             System.gc();
         }
-        
         
         {
             int number = 100;
@@ -142,6 +146,30 @@ public class Tester {
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
             System.out.println();
+            
+            System.gc();
+        }
+        
+        {
+            int number = 10001;
+            
+            System.out.println("Problem 7.");
+            long before = System.nanoTime();
+            long result = Problem7.solve(number);
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            
+            System.gc();
+            
+            System.out.println("Problem 7 ideal solution.");
+            before = System.nanoTime();
+            result = Problem7.ideal(number);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            
             System.gc();
         }
     }
