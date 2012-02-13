@@ -53,7 +53,7 @@ public class Problem9 {
             }
             
             while (k<(2*m) && k<=sm) {
-                if (sm%k==0 && gcd(k,m)==1) {
+                if (sm%k==0 && Utilities.gcd(k,m)==1) {
                     int d = s2/(k*m);
                     int n = k-m;
                     int a = d*(m*m-n*n);
@@ -67,23 +67,4 @@ public class Problem9 {
         return 0;
     }
 
-    private static final int gcd(int k, int m) {
-        int larger = k;
-        int smaller = m;
-        if (m>k) {
-            smaller = k;
-            larger = m;
-        }
-        
-        while (true) {
-            larger -= smaller;
-            if (smaller==larger) return smaller;
-            
-            if (smaller>larger) {
-                int temp = smaller;
-                smaller = larger;
-                larger = temp;
-            }
-        }
-    }
 }
