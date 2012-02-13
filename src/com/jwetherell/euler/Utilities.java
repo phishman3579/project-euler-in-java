@@ -2,7 +2,9 @@ package com.jwetherell.euler;
 
 public class Utilities {
 
-    /* isPrime()
+    /* 
+     * isPrime() using the square root properties
+     * 
      * 1 is not a prime.
      * All primes except 2 are odd.
      * All primes greater than 3 can be written in the form 6k+/-1.
@@ -17,7 +19,7 @@ public class Utilities {
         if (value<9) return true; //we have already excluded 4, 6 and 8.
         if (value%3==0) return false;
         
-        long r = (long)Math.floor(Math.sqrt(value)); //n rounded to the greatest integer r so that r*r<=n
+        long r = (long)(Math.sqrt(value)); //n rounded to the greatest integer r so that r*r<=n
         int f = 5;
         while (f<=r) {
             if (value%f==0) return false;
@@ -28,7 +30,8 @@ public class Utilities {
         return true;
     }
 
-    /* Euclid's greatest common divisor algorithm
+    /* 
+     * Euclid's greatest common divisor algorithm
      */
     public static final int gcd(int k, int m) {
         int larger = k;

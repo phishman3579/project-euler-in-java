@@ -224,6 +224,7 @@ public class Tester {
             System.gc();
         }
         */
+        /*
         {
             int number = 1000;
             
@@ -239,6 +240,29 @@ public class Tester {
             System.out.println("Problem 9 ideal solution.");
             before = System.nanoTime();
             result = Problem9.ideal(number);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            
+            System.gc();
+        }
+        */
+        {
+            int number = 2000000;
+            
+            System.out.println("Problem 10.");
+            long before = System.nanoTime();
+            long result = Problem10.solve(number);
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            
+            System.gc();
+            
+            System.out.println("Problem 9 ideal solution.");
+            before = System.nanoTime();
+            result = Problem10.ideal(number);
             after = System.nanoTime();
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
