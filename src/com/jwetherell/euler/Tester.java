@@ -180,6 +180,7 @@ public class Tester {
             System.gc();
         }
         */
+        /*
         {
             String number = 
                 "73167176531330624919225119674426574742355349194934"+
@@ -215,6 +216,29 @@ public class Tester {
             System.out.println("Problem 8 ideal solution.");
             before = System.nanoTime();
             result = Problem8.ideal(number);
+            after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            System.out.println();
+            
+            System.gc();
+        }
+        */
+        {
+            int number = 1000;
+            
+            System.out.println("Problem 9.");
+            long before = System.nanoTime();
+            long result = Problem9.solve(number);
+            long after = System.nanoTime();
+            System.out.println("result="+result);
+            System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
+            
+            System.gc();
+            
+            System.out.println("Problem 9 ideal solution.");
+            before = System.nanoTime();
+            result = Problem9.ideal(number);
             after = System.nanoTime();
             System.out.println("result="+result);
             System.out.println("Computed in "+FORMAT.format(after-before)+" ns");
