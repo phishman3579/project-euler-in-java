@@ -1,10 +1,8 @@
 package com.jwetherell.euler;
 
-
 /**
- * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
- * What is the 10 001st prime number?
- * http://projecteuler.net/problem=7
+ * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13. What is the 10
+ * 001st prime number? http://projecteuler.net/problem=7
  * 
  * @author Justin Wetherell <phishman3579@gmail.com>
  */
@@ -18,15 +16,15 @@ public class Problem7 {
             result = isPrime(i);
             if (result) {
                 count++;
-                if (count==number) return i;
+                if (count == number) return i;
             }
             i++;
         }
     }
-    
+
     private static final boolean isPrime(long value) {
-        for (int i=2; i<value; i++) {
-            if (value%i==0) return false;
+        for (int i = 2; i < value; i++) {
+            if (value % i == 0) return false;
         }
         return true;
     }
@@ -39,9 +37,9 @@ public class Problem7 {
             result = Utilities.isPrime(i);
             if (result) {
                 count++;
-                if (count==number) return i;
+                if (count == number) return i;
             }
-            i = i+2;
+            i = i + 2;
         }
     }
 }
