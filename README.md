@@ -8,9 +8,11 @@ Implementing Project Euler problems
 Java implementation of project euler problems.
 
 * Created by Justin Wetherell
-* github: http://github.com/phishman3579/project-euler-in-java
-* e-mail: phishman3579@gmail.com
-* Twitter: @phishman3579
+* google:   http://code.google.com/p/project-euler-in-java
+* github:   http://github.com/phishman3579/project-euler-in-java
+* linkedIn: http://www.linkedin.com/in/phishman3579
+* e-mail:   phishman3579@gmail.com
+* Twitter:  @phishman3579
 
 ## Problems Solved
 
