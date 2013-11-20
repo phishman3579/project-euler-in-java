@@ -62,9 +62,10 @@ public class Problem11 {
         return max;
     }
 
+    @SuppressWarnings("unused")
     public static final long ideal(int[][] numbers) {
         long result = 0;
-
+        // TODO: Need to fix
         return result;
     }
 }

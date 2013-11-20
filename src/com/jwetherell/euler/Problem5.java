@@ -52,9 +52,10 @@ public class Problem5 {
         return true;
     }
 
+    @SuppressWarnings("unused")
     public static final long ideal(int max) {
         long smallest = Integer.MAX_VALUE;
-
+        // TODO: Need to fix
         return smallest;
     }
 }

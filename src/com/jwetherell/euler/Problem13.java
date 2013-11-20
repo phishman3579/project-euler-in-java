@@ -125,6 +125,7 @@ public class Problem13 {
             while ((line = br.readLine()) != null) {
                 numbers[i++] = line.toCharArray();
             }
+            br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
